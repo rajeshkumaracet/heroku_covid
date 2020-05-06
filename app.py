@@ -90,7 +90,7 @@ if options == "COVID-19 - India":
     fig6.update_xaxes(rangeslider_visible=True)
     st.write(fig6)
     
-    st.subheader("**Choose State from Choose State from below Select for more detail insight:**")
+    st.subheader("**Choose a State from below selectbox for more detail insight:**")
     get_state = st.selectbox("Choose a State:",remove_row["State"].to_numpy());
     district_wise = pd.read_csv("https://api.covid19india.org/csv/latest/district_wise.csv");
     for_filter = district_wise.loc[district_wise["State"] == get_state][:-1]
