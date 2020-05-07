@@ -133,8 +133,8 @@ if options == "Prevent from COVID-19":
     st.markdown("**Source:** Nucleus Medical Media")
     st.markdown("<p style='text-align:center;background-color:#6497b1 ; color:white; padding:10px; border-radius:50px'>🏠 Stay Home & Save Lives 🙏</p>",unsafe_allow_html=True)
 if options == "COVID-19 - World":
-    countries = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/05-03-2020.csv");
-    get_only_countries = countries = countries.iloc[3017:]
+    countries = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/05-06-2020.csv");
+    get_only_countries = countries = countries.iloc[3035:]
     fig9 = go.Figure(data=[
     go.Bar(name='Confirmed',x=countries["Country_Region"].to_numpy(), y=countries["Confirmed"].to_numpy())
     ])
